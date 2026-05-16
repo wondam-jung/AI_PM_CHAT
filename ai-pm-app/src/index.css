@@ -1,0 +1,100 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* 마크다운 렌더링 스타일 */
+.markdown-body * { box-sizing: border-box; }
+.markdown-body { font-size: 14px !important; line-height: 1.75 !important; color: #1a1a2e !important; font-family: system-ui, sans-serif !important; }
+.markdown-body h1, .markdown-body h2 { font-size: 15px !important; font-weight: 700 !important; color: #1e293b !important; margin: 18px 0 8px !important; padding-bottom: 5px !important; border-bottom: 1px solid #e2e8f0 !important; letter-spacing: normal !important; line-height: 1.4 !important; }
+.markdown-body h3 { font-size: 13px !important; font-weight: 700 !important; color: #334155 !important; margin: 14px 0 5px !important; }
+.markdown-body p { margin: 7px 0 !important; }
+.markdown-body ul, .markdown-body ol { margin: 6px 0 !important; padding-left: 20px !important; }
+.markdown-body li { margin: 3px 0 !important; }
+.markdown-body strong, .markdown-body b { font-weight: 700 !important; color: #0f172a !important; }
+.markdown-body em { font-style: italic !important; }
+
+/* 표 스타일 */
+.markdown-body table { width: 100% !important; border-collapse: collapse !important; margin: 12px 0 !important; font-size: 13px !important; display: table !important; }
+.markdown-body thead tr { background: #e0e7ff !important; }
+.markdown-body th { background: #e0e7ff !important; color: #3730a3 !important; padding: 8px 12px !important; text-align: left !important; font-weight: 700 !important; border: 1px solid #c7d2fe !important; font-size: 13px !important; }
+.markdown-body td { padding: 7px 12px !important; border: 1px solid #e2e8f0 !important; vertical-align: top !important; color: #1a1a2e !important; }
+.markdown-body tbody tr:nth-child(even) td { background: #f8fafc !important; }
+.markdown-body tbody tr:nth-child(odd) td { background: #ffffff !important; }
+
+/* 코드 스타일 */
+.markdown-body code { background: #f1f5f9 !important; color: #0f172a !important; padding: 2px 6px !important; border-radius: 4px !important; font-size: 12px !important; font-family: ui-monospace, Consolas, monospace !important; display: inline !important; font-weight: normal !important; }
+.markdown-body pre { background: #f1f5f9 !important; border: 1px solid #e2e8f0 !important; border-radius: 8px !important; padding: 14px 16px !important; overflow-x: auto !important; margin: 10px 0 !important; }
+.markdown-body pre code { background: none !important; padding: 0 !important; font-size: 13px !important; line-height: 1.6 !important; display: block !important; }
+
+.markdown-body blockquote { border-left: 3px solid #4F46E5 !important; margin: 10px 0 !important; padding: 8px 14px !important; background: #f0f4ff !important; color: #334155 !important; border-radius: 0 6px 6px 0 !important; }
+.markdown-body hr { border: none !important; border-top: 1px solid #e2e8f0 !important; margin: 14px 0 !important; }
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+p { margin: 0; }

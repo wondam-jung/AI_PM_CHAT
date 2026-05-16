@@ -1,0 +1,23 @@
+# AI PM 앱 기술 스택 및 주요 의존성
+
+## Frontend
+react
+react-dom
+vite
+@vitejs/plugin-react
+
+## Agent / AI
+@anthropic-ai/sdk
+
+## DB
+@supabase/supabase-js
+
+## Routing
+react-router-dom
+
+## 환경변수 목록 (.env)
+# ANTHROPIC_API_KEY=        Claude API 키 (Anthropic Console)
+# SUPABASE_URL=             Supabase 프로젝트 URL
+# SUPABASE_ANON_KEY=        Supabase anon/public 키
+# VITE_SUPABASE_URL=        Vite에서 사용하는 Supabase URL (브라우저 노출 가능)
+# VITE_SUPABASE_ANON_KEY=   Vite에서 사용하는 Supabase anon 키 (브라우저 노출 가능)

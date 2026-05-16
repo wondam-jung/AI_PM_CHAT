@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd ai-pm-app && npm install && npm run build",
+  "outputDirectory": "ai-pm-app/dist",
+  "installCommand": "cd ai-pm-app && npm install",
+  "framework": "vite",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
